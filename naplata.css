@@ -1,0 +1,17 @@
+.naplata{
+    position:absolute;
+    background-color:white;
+    color:black;
+    width:500px;
+    height:100px;
+    left:700px;
+    top:300px;
+}
+.prijava{
+    background-color:white;
+    top:300px;
+    left:150px;
+    width:500px;
+    height:200px;
+    position:absolute;
+}

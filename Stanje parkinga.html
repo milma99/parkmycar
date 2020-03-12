@@ -1,0 +1,42 @@
+<html>
+<head><title>parkinga</title>
+    <!--link rel="stylesheet" href="naplata.css"-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    
+
+</head>
+
+<body ng-app="SmartSum">
+
+  <div class="container">
+    
+    <h1>Park my car</h1>
+    <h2>By infoznanosti</h2>
+    <div class="title"><ul><li><a href="index.html">Nazad</a></li></ul></div>
+    <div ng-controller="Parking" class="row">
+        <div class="col-2 mb-2" ng-repeat="parkingSpace in parkingSpaces">
+            
+                        <h5 class="card-title">{{parkingSpace.parking_space_name}}</h5>
+                        <span class="badge badge-success" ng-if="parkingSpace.occupied == 0">slobodan</span><span class="badge badge-danger" ng-if="parkingSpace.occupied == 1">zauzet</span>
+                
+        </div>
+    </div>
+        </div>
+    </div>
+  
+  
+    
+<script src="stanja.js"></script>
+<script src="index.js"></script>
+<script src="prijava.js"></script>
+
+    
+</body>
+</html>

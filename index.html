@@ -1,0 +1,56 @@
+<html>
+<head><title> parkinga</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    
+    
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="jquery-3.4.1.min.js"></script>
+
+</head>
+
+<body ng-app="SmartSum">
+  <div class="container">
+
+    <h1>Park my car</h1>
+    <h2>By infoznanosti</h2>
+   
+    <div class="title">
+    <ul><li><a href="prijava.html">Prijavi se</a></li>
+      <li><a href="naplata.html">Plaćanje</a></li>
+      <li><a href="Stanje parkinga.html">Stanje parkinga</a></li>
+      <li><a href="Parking.html">Sveučilište</a></li></ul>
+      <div class="broj"></div>
+
+      <script>
+        
+        $.getJSON('http://smart.sum.ba/parking?withParkingSpaces=1', function(data) {
+            
+            var number = `Ukupno parkinga: ${data[0].capacity}<br>
+                        Broj slobodnih parkinga: ${data[0].normal_available}<br>
+                        Broj zauzetih parkinga:${data[0].normal_occupied}`
+                        ;
+                    
+            $(".broj").html(number);
+        });
+        socket.send(number);
+        </script>
+      
+    </div>
+  </div>
+  <script src="cordova.js"></script>   
+<script src="stanja.js"></script>
+<script src="index.js"></script>
+<script src="parkinzi.js"></script>
+ 
+
+
+</body>
+</html>
